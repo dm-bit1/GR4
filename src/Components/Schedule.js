@@ -6,6 +6,9 @@ import {FormDataContext} from "./FormDataContext";
 import noteImage from "./note.JPG";  // doctors note for testing
 import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-menu";
 import nannyImage from "./nanny3.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faParachuteBox } from '@fortawesome/free-solid-svg-icons';
+
 /* urgent fix; Make the div that holds the menu have enough space at the top
 so as to not overlap with the text when the menu is opened. */
 export const SchedulePage = () => {
@@ -32,19 +35,53 @@ export const SchedulePage = () => {
     localStorage.setItem('formData', JSON.stringify(formData));
   }, [formData]); // this will save formData to localStorage whenever formData changes
 
+  // Generate the helpBox
+  window.onload = function() {
+    const helpBox = document.getElementById('helpBox');
+    helpBox.innerText = 'Test';
+    helpBox.style.display = 'none';
+    // Set other initial styles if needed
+  };
+
+  // Handle the Help button
+  const handleHelpClick = () => {
+    const helpBox = document.getElementById('helpBox');
+    if (helpBox.style.display === 'none') {
+        helpBox.style.display = 'block';
+        // Optionally set the position of the box
+        helpBox.style.left = '100px'; // X-coordinate
+        helpBox.style.top = '100px';  // Y-coordinate
+    } else {
+        helpBox.style.display = 'none';
+    }
+  }
+
   return (
     <div>
       <div className="schedule_text">
+        <h1>
+          This page is intended to be used by the nanny to view their schedule for the day.
+        </h1>
         <h2> 
           { /* <pre>{JSON.stringify(formData, null, 2)}</pre> */ }
-          Welcome {formData.nannyName}, here is your schedule for {formData.date} as requested by {formData.name}.
+          Welcome {formData.nannyName}, here is your schedule for {formData.date} as requested by {formData.name}
           <br></br>
-          The schedule opens by pressing the circular menu which goes in clockwise order.
+          We hope you're excited for an awesome day full of fun activities.
+          <FontAwesomeIcon icon={faParachuteBox} className="icon" size="2x"/>
           <br></br>
-          Pressing the items in the menu opens the description.
-          <br></br>
+
+          <div className="help-container">
+            <button class="button-62" role="button" onClick={handleHelpClick}>
+              Help
+            </button>
+            <div id="helpBox" className="helpBox">
+              Press the circle menu to view your schedule for the specified day.
+            </div>
+          </div>
+
           <img src={nannyImage} alt="nanny image" className="nannyImage"/>
         </h2>
+        
       </div>
       <div>
         <CircleMenu startAngle={-90} rotationAngle={270} itemSize={10} radius="12">
@@ -55,6 +92,7 @@ export const SchedulePage = () => {
           <CircleMenuItem tooltip="allergy info" onClick={() => console.log("allergy info")}>{formData.allergy}</CircleMenuItem>
         </CircleMenu>
       </div>
+
     </div>
   );
 }

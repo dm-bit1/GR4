@@ -71,9 +71,17 @@
   background-color: pink;
 }
 
+h0 {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 h1 {
   color: black;
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
 }
 
 h2 {
@@ -86,7 +94,7 @@ h2 {
 h3{
   margin: 0;
   padding: 20px;
-  color: purple;
+  color: black;
   font-size: 20px;
 }
 
@@ -120,7 +128,7 @@ h3{
 }
 
 body{
-  background-color: lightblue;
+  background-color: #662d91;
 }
 
 /* CSS */
@@ -162,8 +170,8 @@ body{
   opacity: 0;
   width: max-content;
   max-width: 800px; /* Maximum width of the tooltip - adjust as needed */
-  background-color: purple;
-  color: white;
+  background-color: #6a5acd;
+  color: black;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
@@ -200,4 +208,29 @@ body{
 .button-62:not([disabled]):hover::after:not(:empty) {
   visibility: visible;
   opacity: 1;
+}
+
+.help-container {
+  position: relative; /* Establishes a positioning context */
+  display: inline-block; /* Only as wide as its contents */
+}
+
+.helpBox {
+  background-color: #E6E6FA;
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 0; /* Aligns to the top of the container */
+  left: 100%; /* Positions to the right of the button */
+  white-space: nowrap; /* Prevents wrapping if you want a single line */
+  margin-left: 10px; /* Adds some space between the button and the help box */
+  /* Add other styles as needed */
+  font-size: 30px;
+  color: black;
+  height: auto ; /* 40px; */
+  width: auto;  /* 920px; */
+  border: 2px solid darkgray;
+}
+
+.icon{
+  color: white;
 }
