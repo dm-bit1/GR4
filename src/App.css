@@ -234,3 +234,11 @@ body{
 .icon{
   color: white;
 }
+
+.circleItem{
+  font-size: 12px;
+}
+
+.circleItem div {
+  display: block; /* forces new line */
+}

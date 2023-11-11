@@ -8,6 +8,8 @@ import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-men
 import nannyImage from "./nanny3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faParachuteBox } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faPrescription } from "@fortawesome/free-solid-svg-icons";
 
 /* urgent fix; Make the div that holds the menu have enough space at the top
 so as to not overlap with the text when the menu is opened. */
@@ -84,12 +86,28 @@ export const SchedulePage = () => {
         
       </div>
       <div>
-        <CircleMenu startAngle={-90} rotationAngle={270} itemSize={10} radius="12">
-          <CircleMenuItem tooltip="activity 1" onClick={() => console.log("Item 1")}>{formData.activity1}<br></br>{formData.time1}</CircleMenuItem>
-          <CircleMenuItem tooltip="activity 2" onClick={() => console.log("Item 2")}>{formData.activity2}<br></br>{formData.time2}</CircleMenuItem>
-          <CircleMenuItem tooltip="activity 3" onClick={() => console.log("Item 3")}>{formData.activity3}<br></br>{formData.time3}</CircleMenuItem>
-          <CircleMenuItem tooltip="activity 4" onClick={() => console.log("Item 4")}>{formData.activity4}<br></br>{formData.time4}</CircleMenuItem>
-          <CircleMenuItem tooltip="allergy info" onClick={() => console.log("allergy info")}>{formData.allergy}</CircleMenuItem>
+        <CircleMenu startAngle={-90} rotationAngle={270} itemSize={15} radius="20">
+          <CircleMenuItem className="circleItem" tooltip="activity 1" onClick={() => console.log("Item 1")}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+              <span><FontAwesomeIcon icon={faClock} size="2x" /> {formData.time1} </span>
+              <span>{formData.activity1}</span>
+              <label>
+                <input type="checkbox" className="checkboxClass"/>
+                  Check when done
+              </label>
+              <span>
+                <input type ="text"/>
+              </span>
+              <span>
+                <button> submit to parent </button>
+              </span>
+            </div>
+          </CircleMenuItem>
+
+          <CircleMenuItem className="circleItem" tooltip="activity 2" onClick={() => console.log("Item 2")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time2}<br></br>{formData.activity2}</CircleMenuItem>
+          <CircleMenuItem className="circleItem" tooltip="activity 3" onClick={() => console.log("Item 3")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time3}<br></br>{formData.activity3}</CircleMenuItem>
+          <CircleMenuItem className="circleItem" tooltip="activity 4" onClick={() => console.log("Item 4")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time4}<br></br>{formData.activity4}</CircleMenuItem>
+          <CircleMenuItem className="circleItem" tooltip="allergy info" onClick={() => console.log("allergy info")}><FontAwesomeIcon icon={faPrescription} size="2x"/>{formData.allergy}</CircleMenuItem>
         </CircleMenu>
       </div>
 
