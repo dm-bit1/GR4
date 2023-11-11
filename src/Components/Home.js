@@ -1,6 +1,9 @@
 import logo from './nanny.jpg';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileLines } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -19,9 +22,10 @@ export const HomePage = () => {
           Welcome to the NannyHelper!
         </h0>
         <h3>
-          We have found through many interviews that nannies struggle to keep up
+          We have found through many interviews that nannies struggle to keep up with their duties that the children's parents want them to do each day.
           <br></br>
-          with their duties that the children's parents want them to do each day.
+          Which is why Group 17 decided to make this application, to help struggling nannies
+          and parents.
         </h3>
         <div className="Buttons">
           <div>
@@ -29,6 +33,8 @@ export const HomePage = () => {
               role="button"
               onClick={handleParentButtonClick}> 
               Parent
+              <br></br>
+              <FontAwesomeIcon icon = {faFileLines} size="2x"/>
             </button>
             
             <button class="button-62"
@@ -43,6 +49,8 @@ export const HomePage = () => {
               role="button"
               onClick={handleScheduleButtonClick}>
               View schedule
+              <br></br>
+              <FontAwesomeIcon icon={faCalendarCheck} size="2x"/>              
             </button>
 
             <button class="button-62"
