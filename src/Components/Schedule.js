@@ -87,7 +87,7 @@ export const SchedulePage = () => {
       </div>
       <div>
         <CircleMenu startAngle={-90} rotationAngle={270} itemSize={15} radius="20">
-          <CircleMenuItem className="circleItem" tooltip="activity 1" onClick={() => console.log("Item 1")}>
+          <CircleMenuItem className="circleItem" tooltip="activity 1" onClick={() => console.log("activity 1")}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
               <span><FontAwesomeIcon icon={faClock} size="2x" /> {formData.time1} </span>
               <span>{formData.activity1}</span>
@@ -104,9 +104,57 @@ export const SchedulePage = () => {
             </div>
           </CircleMenuItem>
 
-          <CircleMenuItem className="circleItem" tooltip="activity 2" onClick={() => console.log("Item 2")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time2}<br></br>{formData.activity2}</CircleMenuItem>
-          <CircleMenuItem className="circleItem" tooltip="activity 3" onClick={() => console.log("Item 3")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time3}<br></br>{formData.activity3}</CircleMenuItem>
-          <CircleMenuItem className="circleItem" tooltip="activity 4" onClick={() => console.log("Item 4")}><FontAwesomeIcon icon={faClock} size="2x" />{formData.time4}<br></br>{formData.activity4}</CircleMenuItem>
+          <CircleMenuItem className="circleItem" tooltip="activity 2" onClick={() => console.log("activity 2")}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+              <span><FontAwesomeIcon icon={faClock} size="2x" /> {formData.time2} </span>
+              <span>{formData.activity2}</span>
+              <label>
+                <input type="checkbox" className="checkboxClass"/>
+                  Check when done
+              </label>
+              <span>
+                <input type ="text"/>
+              </span>
+              <span>
+                <button> submit to parent </button>
+              </span>
+            </div>
+          </CircleMenuItem>
+
+          <CircleMenuItem className="circleItem" tooltip="activity 3" onClick={() => console.log("activity 3")}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+              <span><FontAwesomeIcon icon={faClock} size="2x" /> {formData.time3} </span>
+              <span>{formData.activity3}</span>
+              <label>
+                <input type="checkbox" className="checkboxClass"/>
+                  Check when done
+              </label>
+              <span>
+                <input type ="text"/>
+              </span>
+              <span>
+                <button> submit to parent </button>
+              </span>
+            </div>
+          </CircleMenuItem>
+
+          <CircleMenuItem className="circleItem" tooltip="activity 4" onClick={() => console.log("activity 4")}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+              <span><FontAwesomeIcon icon={faClock} size="2x" /> {formData.time4} </span>
+              <span>{formData.activity4}</span>
+              <label>
+                <input type="checkbox" className="checkboxClass"/>
+                  Check when done
+              </label>
+              <span>
+                <input type ="text"/>
+              </span>
+              <span>
+                <button> submit to parent </button>
+              </span>
+            </div>
+          </CircleMenuItem>
+
           <CircleMenuItem className="circleItem" tooltip="allergy info" onClick={() => console.log("allergy info")}><FontAwesomeIcon icon={faPrescription} size="2x"/>{formData.allergy}</CircleMenuItem>
         </CircleMenu>
       </div>
