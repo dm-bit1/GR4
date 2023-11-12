@@ -7,7 +7,7 @@ import noteImage from "./note.JPG";  // doctors note for testing
 import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-menu";
 import nannyImage from "./nanny3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faParachuteBox } from '@fortawesome/free-solid-svg-icons';
+import { faUmbrella } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faPrescription } from "@fortawesome/free-solid-svg-icons";
 
@@ -68,8 +68,8 @@ export const SchedulePage = () => {
           { /* <pre>{JSON.stringify(formData, null, 2)}</pre> */ }
           Welcome {formData.nannyName}, here is your schedule for {formData.date} as requested by {formData.name}
           <br></br>
-          We hope you're excited for an awesome day full of fun activities.
-          <FontAwesomeIcon icon={faParachuteBox} className="icon" size="2x"/>
+            We hope you're excited for an awesome day full of fun activities.
+            <FontAwesomeIcon icon={faUmbrella} className="icon" size="2x"/>
           <br></br>
 
           <div className="help-container">
