@@ -50,6 +50,7 @@ const BasicFormValidation = () => {
         <Paper>
           <Box m={5} p={3}>
             <Typography variant="h5">Basic Formik Form Validation</Typography>
+            <h1>Dear parent, please complete this form with the planned schedule for the nanny.</h1>
             <Formik
               initialValues={initialValue}
               validationSchema={YupValidation}
@@ -71,7 +72,6 @@ const BasicFormValidation = () => {
                       onBlur={props.handleBlur}
                       helperText={<ErrorMessage name="name" />}
                       error={props.errors.name && props.touched.name}
-                      required // only required field currently
                     />
                     {/* Second Way */}
                     <Field
@@ -161,6 +161,81 @@ const BasicFormValidation = () => {
                       variant="outlined"
                       margin="dense"
                       helperText={<ErrorMessage name="time1" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    {/* Second Way */}
+                    <Field
+                      as={TextField}
+                      label="Activity 2"
+                      type="text"
+                      name="activity2"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="activity2" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    <Field
+                      as={TextField}
+                      label="Time to do activity 2"
+                      type="text"
+                      name="time2"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="time2" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    {/* Second Way */}
+                    <Field
+                      as={TextField}
+                      label="Activity 3"
+                      type="text"
+                      name="activity3"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="activity3" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    <Field
+                      as={TextField}
+                      label="Time to do activity 3"
+                      type="text"
+                      name="time3"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="time3" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    {/* Second Way */}
+                    <Field
+                      as={TextField}
+                      label="Activity 4"
+                      type="text"
+                      name="activity4"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="activity4" />}
+                      error={props.errors.email && props.touched.email}
+                    />
+
+                    <Field
+                      as={TextField}
+                      label="Time to do activity 4"
+                      type="text"
+                      name="time4"
+                      fullWidth
+                      variant="outlined"
+                      margin="dense"
+                      helperText={<ErrorMessage name="time4" />}
                       error={props.errors.email && props.touched.email}
                     />
 

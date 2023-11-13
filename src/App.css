@@ -81,7 +81,7 @@ h0 {
 h1 {
   color: black;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
@@ -213,6 +213,7 @@ body{
 .help-container {
   position: relative; /* Establishes a positioning context */
   display: inline-block; /* Only as wide as its contents */
+  padding-right: 20px;
 }
 
 .helpBox {
@@ -241,4 +242,19 @@ body{
 
 .circleItem div {
   display: block; /* forces new line */
+}
+
+.parentText{
+  display: flex;
+  align-items: left;
+}
+
+.users{
+  font-size: 20px;
+  color: white;
+}
+
+.helpButton{
+  position: 'relative';
+  display: 'inline-block';
 }
