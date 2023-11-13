@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component, useContext, useEffect, useState } from 'react';
 import logo from './nanny.jpg';
 import {FormDataContext} from "./FormDataContext";
 import noteImage from "./note.JPG";  // doctors note for testing
@@ -11,6 +11,7 @@ import { faPrescription } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const SchedulePage = () => {
+  /* this formData basically uses a preloaded form for easy testing.
   const formData = {
     name: "Jane Doe",
     email: "jane@gmail.com",
@@ -28,6 +29,10 @@ export const SchedulePage = () => {
     time4: "16:30-17:00",
     image: noteImage
   };
+  If you want to change the formData to use the form from the Parent page use the code below instead.
+  const { formData } = useContext(FormDataContext); // access the data in read-only mode
+*/
+  const { formData } = useContext(FormDataContext); // access the data in read-only mode
 
   useEffect(() => {
     localStorage.setItem('formData', JSON.stringify(formData));
@@ -79,7 +84,7 @@ export const SchedulePage = () => {
 
           <img src={nannyImage} alt="nanny image" className="nannyImage"/>
         </h2>
-        
+
       </div>
       <div>
       <CircleMenu startAngle={-90} rotationAngle={270} itemSize={15} radius="20">
