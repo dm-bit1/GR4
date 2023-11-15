@@ -3,7 +3,9 @@
 import BasicFormValidation from "../Components/BasicFormValidation";
 import React, { useState, useContext } from 'react';
 import {FormDataContext} from "./FormDataContext";
-import logo from "./nanny_read.jpg"; 
+import logo from "./nanny_read.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faPenToSquare, faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const ParentPage = () => {
   const [showForm, setShowForm] = useState(false);
@@ -39,11 +41,15 @@ export const ParentPage = () => {
 
     <div style={{ position: 'absolute', top: '70px', left: '70px', display: 'flex', gap: '70px' }}>
       <button class="button-62" onClick={() => setShowForm(!showForm)}>
-        {showForm ? 'Hide form' : 'Add a new schedule'}
+        <FontAwesomeIcon icon={faCalendarPlus} color="white" size="2x" />
+
+        {showForm ? 'Hide form' : <div> Add a new schedule </div>}
       </button>
 
       <button class="button-62" onClick={() => setUpdateForm(!updateForm)}>
-        {updateForm ? 'Hide update form' : <p> Update schedule by {formData.name} {formData.date} </p>}
+        <FontAwesomeIcon icon={faPenToSquare} color="white" size="2x" />
+
+        {updateForm ? 'Hide update form' : <div>Update schedule by {formData.name} {formData.date}</div> }
       </button>
 
     </div>

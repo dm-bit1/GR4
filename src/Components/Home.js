@@ -6,7 +6,7 @@ import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -48,10 +48,13 @@ export const HomePage = () => {
         <div>
           <button class="button-62" 
             role="button"
-            onClick={handleParentButtonClick}> 
-            Parent
-            <br></br>
+            onClick={handleParentButtonClick}>
             <FontAwesomeIcon icon = {faFileLines} size="2x"/>
+
+            <span> Parent </span>
+
+            <br></br>
+
           </button>
           
           <button class="button-62" onClick={() => setShowParentHelp(!showParentHelp)}>
@@ -82,9 +85,9 @@ export const HomePage = () => {
           <button class="button-62"
             role="button"
             onClick={handleScheduleButtonClick}>
-            View schedule
+            <FontAwesomeIcon icon={faCalendarCheck} size="2x"/> 
             <br></br>
-            <FontAwesomeIcon icon={faCalendarCheck} size="2x"/>              
+            View schedule             
           </button>
 
           <button class="button-62" onClick={() => setShowScheduleHelp(!showScheduleHelp)}>
