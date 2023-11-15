@@ -163,52 +163,6 @@ body{
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-/* Tooltip styles */
-.button-62:not([disabled])::after {
-  content: attr(data-tooltip); /* Use the data-tooltip attribute for the message */
-  visibility: hidden;
-  opacity: 0;
-  width: max-content;
-  max-width: 800px; /* Maximum width of the tooltip - adjust as needed */
-  background-color: #6a5acd;
-  color: black;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  bottom: 130%; /* Adjust as needed */
-  white-space: nowrap;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Show tooltip on hover */
-.button-62:not([disabled]):hover::after {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Hide the tooltip when data-tooltip is empty */
-.button-62:not([disabled])::after {
-  content: attr(data-tooltip);
-  /* Other styles */
-}
-
-/* This will effectively hide the tooltip when there is no message */
-.button-62:not([disabled])[data-tooltip=""]::after,
-.button-62:not([disabled])[data-tooltip]::after:empty {
-  content: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* Show tooltip on hover only when data-tooltip is not empty */
-.button-62:not([disabled]):hover::after:not(:empty) {
-  visibility: visible;
-  opacity: 1;
-}
 
 .help-container {
   position: relative; /* Establishes a positioning context */
@@ -257,4 +211,16 @@ body{
 .helpButton{
   position: 'relative';
   display: 'inline-block';
+}
+
+.parentPage{
+  display: flex;
+}
+
+.scheduleButtons{
+  display: inline;
+}
+
+.xButton:hover{
+  background-color: magenta;
 }

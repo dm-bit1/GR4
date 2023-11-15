@@ -11,27 +11,6 @@ import { faPrescription } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const SchedulePage = () => {
-  /* this formData basically uses a preloaded form for easy testing.
-  const formData = {
-    name: "Jane Doe",
-    email: "jane@gmail.com",
-    phoneNumber: "773-777-3333",
-    nannyName: "Amanda McPhee",
-    date: "2023-11-06",
-    allergy: "Jake has peanut allergy, Jill has milk allergy",
-    activity1: "Reading",
-    time1: "12:00-14:00",
-    activity2: "Playtime",
-    time2: "15:00-16:00",
-    activity3: "Nap",
-    time3: "16:00-16:30",
-    activity4: "Snack",
-    time4: "16:30-17:00",
-    image: noteImage
-  };
-  If you want to change the formData to use the form from the Parent page use the code below instead.
-  const { formData } = useContext(FormDataContext); // access the data in read-only mode
-*/
   const { formData } = useContext(FormDataContext); // access the data in read-only mode
 
   useEffect(() => {
@@ -73,6 +52,7 @@ export const SchedulePage = () => {
                 Press the circle menu to open up the schedule for {formData.nannyName}. <br></br>
                 Click check when done to send a notification to {formData.name}. <br></br>
                 Enter a note to send to {formData.name}.
+                <button style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleHelp}> X </button>
               </div>
             )}
           </div>

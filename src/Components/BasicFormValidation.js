@@ -15,25 +15,7 @@ import { useState, useContext } from "react";
 import YupValidation from "./YupValidation";
 import { FormDataContext } from "./FormDataContext";
 
-const BasicFormValidation = () => {
-  const initialValue = {
-    name: "",
-    email: "",
-    phoneNumber: "",
-    nannyName:"",
-    date: "",
-    allergy: "", // allergy information
-    activity1: "",  // simple layout that allows up to 4 activities and their duration
-    time1: "",
-    activity2: "",
-    time2: "",
-    activity3: "",
-    time3: "",
-    activity4: "",
-    time4: "",
-    image: "" // Optional image. Example use can be a doctor's note.
-  };
-
+const BasicFormValidation = ({ initialValue }) => {
   const {setFormData} = useContext(FormDataContext);
 
   const handleSubmit = (values, props) => {
@@ -270,6 +252,7 @@ const BasicFormValidation = () => {
         </Paper>
       </Grid>
       <Grid item sm={3} xs={false}></Grid>
+
     </Grid>
   );
 };
