@@ -52,7 +52,7 @@ export const SchedulePage = () => {
                 Press the circle menu to open up the schedule for {formData.nannyName}. <br></br>
                 Click check when done to send a notification to {formData.name}. <br></br>
                 Enter a note to send to {formData.name}.
-                <button style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleHelp}> X </button>
+                <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleHelp}> X </button>
               </div>
             )}
           </div>

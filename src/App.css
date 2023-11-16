@@ -72,14 +72,14 @@
 }
 
 h0 {
-  color: black;
+  color: white;
   font-size: 40px;
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h1 {
-  color: black;
+  color: orange;
   font-size: 20px;
   text-align: left;
 }
@@ -87,14 +87,14 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
   font-size: 30px;
 }
 
 h3{
   margin: 0;
   padding: 20px;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
@@ -129,6 +129,8 @@ h3{
 
 body{
   background-color: #662d91;
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* CSS */
@@ -223,4 +225,10 @@ body{
 
 .xButton:hover{
   background-color: magenta;
+}
+
+.homePage{
+  position: relative;
+  top: 100px;
+  align-items: center;
 }

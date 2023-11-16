@@ -6,7 +6,7 @@ import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { faLightbulb, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faPenToSquare, faPenNib } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -33,15 +33,19 @@ export const HomePage = () => {
     
     /* Fix me add a home button that takes it back to the HomePage */
     return (
-      <div>
+      <div className="homePage">
         <h0> 
           Welcome to the NannyHelper.<FontAwesomeIcon icon={faUmbrella} className="icon" size="1x"/>
         </h0>
+
         <h3>
-          We have found through many interviews that nannies struggle to keep up with their duties that the children's parents want them to do each day.
+          What's the problem statement? 
+          <FontAwesomeIcon icon={faPenNib} color="white" size="1x" />
+          <br></br>
+          We have found that nannies struggle to keep up with their duties that the children's parents want them to do each day.
           <br></br>
           Which is why Group 17 decided to make this application, to help struggling nannies
-          and parents.
+          and parents.      
         </h3>
         
         <div className="Buttons">
@@ -49,7 +53,7 @@ export const HomePage = () => {
           <button class="button-62" 
             role="button"
             onClick={handleParentButtonClick}>
-            <FontAwesomeIcon icon = {faFileLines} size="2x"/>
+            <FontAwesomeIcon icon = {faFileLines} size="3x"/>
 
             <span> Parent </span>
 
@@ -85,7 +89,7 @@ export const HomePage = () => {
           <button class="button-62"
             role="button"
             onClick={handleScheduleButtonClick}>
-            <FontAwesomeIcon icon={faCalendarCheck} size="2x"/> 
+            <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
             <br></br>
             View schedule             
           </button>
