@@ -5,10 +5,7 @@ import noteImage from "./note.JPG";  // doctors note for testing
 import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-menu";
 import nannyImage from "./nanny3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUmbrella } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { faPrescription, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faPrescription, faCircleInfo, faUser, faClock, faUsers, faUmbrella } from "@fortawesome/free-solid-svg-icons";
 import { DemoApp } from './demoapp';
 /*https://www.npmjs.com/package/@fullcalendar/react*/
 
@@ -32,10 +29,13 @@ export const SchedulePage = () => {
           This page is intended to be used by the nanny to view their schedule for the day.
         </h1>
         <h2> 
-          Welcome {formData.nannyName}, here is your schedule for {formData.date} as requested by {formData.name}
+          Welcome &nbsp;
+          <FontAwesomeIcon icon={faUser} color="pink" size="2x" />
+          {formData.nannyName}, here is your schedule for {formData.date} as requested by &nbsp;
+          <FontAwesomeIcon icon={faUser} color="lightblue" size="2x" /> {formData.name}
           <br></br>
+          <FontAwesomeIcon icon={faUmbrella} className="icon" size="2x"/>
           We hope you're excited for an awesome day full of fun activities.
-          <FontAwesomeIcon icon={faUmbrella} className="icon" size="1x"/>
           <br></br>
 
           <div style={{ position: 'relative', display: 'inline-block' }}>
