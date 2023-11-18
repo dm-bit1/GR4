@@ -5,7 +5,7 @@ import noteImage from "./note.JPG";  // doctors note for testing
 import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-menu";
 import nannyImage from "./nanny3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPrescription, faCircleInfo, faUser, faClock, faUsers, faUmbrella, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faPrescription, faCircleInfo, faUser, faClock, faUsers, faUmbrella, faStar, faLightbulb, faNotesMedical } from "@fortawesome/free-solid-svg-icons";
 import { DemoApp } from './demoapp';
 /*https://www.npmjs.com/package/@fullcalendar/react*/
 
@@ -18,8 +18,14 @@ export const SchedulePage = () => {
 
   const [showHelp, setShowHelp] = useState(false);
 
+  const [showAllergy, setShowAllergy] = useState(false);
+
   const toggleHelp = () => {
     setShowHelp(!showHelp);
+  }
+
+  const toggleAllergy = () => {
+    setShowAllergy(!showAllergy);
   }
 
   return (
@@ -47,7 +53,10 @@ export const SchedulePage = () => {
           </div>
 
           <div style={{ position: 'relative', display: 'inline-block', padding: '20px' }}>
-            <button class="button-62" onClick={toggleHelp}> Help </button>
+            <button class="button-62" onClick={toggleHelp}>
+              <FontAwesomeIcon icon={faLightbulb} color="white" size="2x" />
+              Help 
+            </button>
 
             {showHelp && (
               <div style={{
@@ -67,12 +76,40 @@ export const SchedulePage = () => {
                 including activities sent by {formData.name}
 
                 <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleHelp}> X </button>
+                
+              </div>
+            )}
+
+            <button class="button-62" onClick={toggleAllergy}>
+                <FontAwesomeIcon icon={faNotesMedical} color="white" size="2x" />
+                Allergy
+            </button>
+
+            {showAllergy && (
+              <div style={{
+                position: 'absolute',
+                bottom: '100%',
+                backgroundColor: 'yellow',
+                border: '4px solid black',
+                padding: '10px',
+                width: '600px',
+                color: 'black',
+                size: 10
+              }}>
+
+                <FontAwesomeIcon icon={faNotesMedical} color="purple" size="2x" />
+                  enter allergy info
+
+                <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleAllergy}> X </button>
+                
               </div>
             )}
           </div>
 
           { /* <img src={nannyImage} alt="nanny image" className="nannyImage"/> */ }
         </h2>
+
+        
 
       </div>
 
