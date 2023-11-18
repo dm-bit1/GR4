@@ -6,7 +6,7 @@ import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { faLightbulb, faPenToSquare, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faPenToSquare, faPenNib, faClipboardQuestion, faLaptopCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -34,18 +34,28 @@ export const HomePage = () => {
     /* Fix me add a home button that takes it back to the HomePage */
     return (
       <div className="homePage">
-        <h0> 
-          Welcome to the NannyHelper.<FontAwesomeIcon icon={faUmbrella} className="icon" size="1x"/>
+        <h0>
+          <FontAwesomeIcon icon={faUmbrella} className="icon" size="2x"/>
+          Welcome to the NannyHelper
         </h0>
 
         <h3>
-          What's the problem statement? 
-          <FontAwesomeIcon icon={faPenNib} color="white" size="1x" />
+          <FontAwesomeIcon icon={faClipboardQuestion} color="white" size="2x" />
+          What's Group 17's problem statement?
           <br></br>
+          <br></br>
+          <FontAwesomeIcon icon={faPenNib} color="white" size="2x" />
           We have found that nannies struggle to keep up with their duties that the children's parents want them to do each day.
           <br></br>
+          <br></br>
+          <FontAwesomeIcon icon={faLaptopCode} color="white" size="2x" />
+          <FontAwesomeIcon icon={faHeart} color="pink" size="2x" />
           Which is why Group 17 decided to make this application, to help struggling nannies
-          and parents.      
+          and parents.
+          <br></br>
+          <br></br>
+          <FontAwesomeIcon icon = { faCircleInfo } color="white" size="2x" />
+          Parents can enter a form to set the nanny's schedule in the parent page. And, the nanny can view their schedule in the nanny page. 
         </h3>
         
         <div className="Buttons">
@@ -62,7 +72,7 @@ export const HomePage = () => {
           </button>
           
           <button class="button-62" onClick={() => setShowParentHelp(!showParentHelp)}>
-            <FontAwesomeIcon icon={faLightbulb} size="1x" color="yellow"/>
+            <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
           </button>
 
           {showParentHelp && (
@@ -76,9 +86,9 @@ export const HomePage = () => {
               fontWeight: 'bold',
               fontSize: '20px'
             }}>
-              <FontAwesomeIcon icon={faCircleInfo} color="purple" size="1x" />
+              <FontAwesomeIcon icon={faCircleInfo} color="purple" size="2x" />
 
-              The parent page lets the parent set the nanny's awesome schedule for the day.
+              The parent page lets the parent set the nanny's schedule for the day including activities. Awesome, right?
 
               <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleParentHelp}> X </button>
             </div>
@@ -91,11 +101,11 @@ export const HomePage = () => {
             onClick={handleScheduleButtonClick}>
             <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
             <br></br>
-            View schedule             
+            Nanny             
           </button>
 
           <button class="button-62" onClick={() => setShowScheduleHelp(!showScheduleHelp)}>
-            <FontAwesomeIcon icon={faLightbulb} size="1x" color="yellow"/>
+            <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
           </button>
 
           {showScheduleHelp && (
@@ -109,7 +119,7 @@ export const HomePage = () => {
               fontWeight: 'bold',
               fontSize: '20px'
             }}>
-              <FontAwesomeIcon icon={faCircleInfo} color="purple" size="1x" />
+              <FontAwesomeIcon icon={faCircleInfo} color="purple" size="2x" />
               The schedule page lets the nanny view their schedule for the day. How cool is that?
         
               <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleScheduleHelp}> X </button>
