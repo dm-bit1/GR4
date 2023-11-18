@@ -228,6 +228,7 @@ body{
 }
 
 .homePage{
+  margin-top:100px;
   display: block;
   position: relative;
   top: 100px;

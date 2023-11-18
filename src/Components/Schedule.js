@@ -26,7 +26,7 @@ export const SchedulePage = () => {
     <div className="schedulePage">
       <div className="schedule_text">
         <h1>
-          This page is intended to be used by the nanny to view their schedule for the day.
+          This page is intended for the nanny to view their schedule for the day.
         </h1>
         <h2> 
           Welcome &nbsp;
