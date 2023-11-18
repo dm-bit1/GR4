@@ -91,6 +91,13 @@ h2 {
   font-size: 30px;
 }
 
+h4 {
+  margin: 0;
+  padding: 0;
+  color: rgb(9, 108, 238);
+  font-size: 30px;
+}
+
 h3{
   margin: 0;
   padding: 20px;

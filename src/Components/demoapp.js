@@ -52,7 +52,7 @@ export class DemoApp extends React.Component {
     return (
       <div className='demo-app-sidebar'>
         <div className='demo-app-sidebar-section'>
-          <h2>Instructions</h2>
+          <h4>Instructions</h4>
           <ul>
             <li>Select dates and you will be prompted to create a new event</li>
             <li>Drag, drop, and resize events</li>
@@ -70,7 +70,7 @@ export class DemoApp extends React.Component {
           </label>
         </div>
         <div className='demo-app-sidebar-section'>
-          <h2>All Events ({this.state.currentEvents.length})</h2>
+          <h4>All Events ({this.state.currentEvents.length})</h4>
           <ul>
             {this.state.currentEvents.map(renderSidebarEvent)}
           </ul>
