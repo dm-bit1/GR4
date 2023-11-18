@@ -5,7 +5,7 @@ import noteImage from "./note.JPG";  // doctors note for testing
 import { CircleMenu, CircleMenuItem, CircleMenuToggle } from "react-circular-menu";
 import nannyImage from "./nanny3.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPrescription, faCircleInfo, faUser, faClock, faUsers, faUmbrella } from "@fortawesome/free-solid-svg-icons";
+import { faPrescription, faCircleInfo, faUser, faClock, faUsers, faUmbrella, faStar } from "@fortawesome/free-solid-svg-icons";
 import { DemoApp } from './demoapp';
 /*https://www.npmjs.com/package/@fullcalendar/react*/
 
@@ -34,11 +34,19 @@ export const SchedulePage = () => {
           {formData.nannyName}, here is your schedule for {formData.date} as requested by &nbsp;
           <FontAwesomeIcon icon={faUser} color="lightblue" size="2x" /> {formData.name}
           <br></br>
-          <FontAwesomeIcon icon={faUmbrella} className="icon" size="2x"/>
-          We hope you're excited for an awesome day full of fun activities.
+          <FontAwesomeIcon icon={faStar} className="icon" size="2x"/>
+          We hope you're excited for an awesome day full of fun activities, {formData.nannyName}.
+          <FontAwesomeIcon icon={faStar} className="icon" size="2x"/>
           <br></br>
 
-          <div style={{ position: 'relative', display: 'inline-block' }}>
+          <div>
+            <FontAwesomeIcon icon={faUser} color="lightblue" size="2x"/>
+            {formData.name}
+            <FontAwesomeIcon icon={faUser} color="pink" size="2x"/>
+            {formData.nannyName}
+          </div>
+
+          <div style={{ position: 'relative', display: 'inline-block', padding: '20px' }}>
             <button class="button-62" onClick={toggleHelp}> Help </button>
 
             {showHelp && (
@@ -50,7 +58,7 @@ export const SchedulePage = () => {
                 padding: '10px',
                 width: '600px',
                 color: 'black',
-                size: 20
+                size: 10
               }}>
 
                 <FontAwesomeIcon icon={faCircleInfo} color="purple" size="2x" />
@@ -62,11 +70,6 @@ export const SchedulePage = () => {
               </div>
             )}
           </div>
-
-          <span className="users">
-            <FontAwesomeIcon icon={faUsers} color="white"/>
-            {formData.name} {formData.nannyName}
-          </span>
 
           { /* <img src={nannyImage} alt="nanny image" className="nannyImage"/> */ }
         </h2>
