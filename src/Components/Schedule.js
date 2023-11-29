@@ -38,7 +38,7 @@ export const SchedulePage = () => {
           Welcome &nbsp;
           <FontAwesomeIcon icon={faUser} color="pink" size="2x" />
           {formData.nannyName}, here is your schedule for {formData.date} as requested by &nbsp;
-          <FontAwesomeIcon icon={faUser} color="lightblue" size="2x" /> {formData.name}
+          <FontAwesomeIcon icon={faUser} color="darkblue" size="2x" /> {formData.name}
           <br></br>
           <FontAwesomeIcon icon={faStar} className="icon" size="2x"/>
           We hope you're excited for an awesome day full of fun activities, {formData.nannyName}.
@@ -46,7 +46,7 @@ export const SchedulePage = () => {
           <br></br>
 
           <div>
-            <FontAwesomeIcon icon={faUser} color="lightblue" size="2x"/>
+            <FontAwesomeIcon icon={faUser} color="darkblue" size="2x"/>
             {formData.name}
             <FontAwesomeIcon icon={faUser} color="pink" size="2x"/>
             {formData.nannyName}

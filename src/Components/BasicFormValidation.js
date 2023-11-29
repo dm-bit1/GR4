@@ -70,7 +70,7 @@ const BasicFormValidation = ({ initialValue }) => {
 
                     <Field
                       as={TextField}
-                      label="Phone Number"
+                      label="Phone number use format 515-115-1115"
                       name="phoneNumber"
                       fullWidth
                       variant="outlined"
@@ -97,7 +97,7 @@ const BasicFormValidation = ({ initialValue }) => {
                     {/* Second Way */}
                     <Field
                       as={TextField}
-                      label="Date to schedule the nanny"
+                      label="Date to schedule the nanny in format YYYY-MM-DD"
                       type="text"
                       name="date"
                       fullWidth
@@ -110,7 +110,7 @@ const BasicFormValidation = ({ initialValue }) => {
                     {/* Second Way */}
                     <Field
                       as={TextField}
-                      label="Allergy info"
+                      label="Relevant allergy info"
                       type="text"
                       name="allergy"
                       fullWidth
@@ -136,7 +136,7 @@ const BasicFormValidation = ({ initialValue }) => {
                     {/* Second Way */}
                     <Field
                       as={TextField}
-                      label="Time to do activity 1"
+                      label="Time frame for activity 1, e.g. 9-13"
                       type="text"
                       name="time1"
                       fullWidth
@@ -161,7 +161,7 @@ const BasicFormValidation = ({ initialValue }) => {
 
                     <Field
                       as={TextField}
-                      label="Time to do activity 2"
+                      label="Time frame for activity 2, e.g. 9-13"
                       type="text"
                       name="time2"
                       fullWidth
@@ -186,7 +186,7 @@ const BasicFormValidation = ({ initialValue }) => {
 
                     <Field
                       as={TextField}
-                      label="Time to do activity 3"
+                      label="Time frame for activity 3, e.g. 9-13"
                       type="text"
                       name="time3"
                       fullWidth
@@ -211,7 +211,7 @@ const BasicFormValidation = ({ initialValue }) => {
 
                     <Field
                       as={TextField}
-                      label="Time to do activity 4"
+                      label="Time frame for activity 4, e.g. 9-13"
                       type="text"
                       name="time4"
                       fullWidth

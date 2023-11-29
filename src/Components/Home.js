@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb, faPenToSquare, faPenNib, faClipboardQuestion, faLaptopCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
@@ -41,7 +41,7 @@ export const HomePage = () => {
 
         <h3>
           <FontAwesomeIcon icon={faClipboardQuestion} color="white" size="2x" />
-          What's Group 17's problem statement?
+          What's Group 17's problem statement? Read below
           <br></br>
           <br></br>
           <FontAwesomeIcon icon={faPenNib} color="white" size="2x" />
@@ -58,37 +58,53 @@ export const HomePage = () => {
           Parents can enter a form to set the nanny's schedule in the parent page. And, the nanny can view their schedule in the nanny page. 
         </h3>
         
-        <div className="Buttons">
-        <div>
-          <button class="button-62" 
-            role="button"
-            onClick={handleParentButtonClick}>
-            <FontAwesomeIcon icon = {faFileLines} size="3x"/>
+        
+        
+        <header className="App-header">
+          <h4>
+            <FontAwesomeIcon icon={faUmbrella} style={{ color: 'rgb(9, 108, 238)' }} className="icon" size="2x" />
+            NannyHelper by {' '}
+            <FontAwesomeIcon icon={faLaptopCode} style={{ color: 'rgb(9, 108, 238)' }} className="icon" size="2x" />
+            {' '}
+            Group 17
+            {' '}
+            <FontAwesomeIcon icon={faSquareCheck} style={{ color: 'rgb(9, 108, 238)' }} className="icon" size="2x"/>
+          </h4>
 
-            <span> Parent </span>
+          <div className="Buttons">
+            <div>
+              <button class="button-62" 
+                role="button"
+                onClick={handleParentButtonClick}>
+                <FontAwesomeIcon icon = {faFileLines} size="3x"/>
 
-            <br></br>
+                <span> 
+                  Parent
+                </span>
 
-          </button>
+                <br></br>
+
+              </button>
           
-          <button class="button-62" onClick={() => setShowParentHelp(!showParentHelp)}>
-            <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
-          </button>
+              <button class="button-62" onClick={() => setShowParentHelp(!showParentHelp)}>
+                <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
+              </button>
 
-          {showParentHelp && (
-            <div style={{
-              position: 'absolute',
-              backgroundColor: 'yellow',
-              border: '4px solid black',
-              padding: '10px',
-              width: '300px',
-              color: 'black',
-              fontWeight: 'bold',
-              fontSize: '20px'
-            }}>
+              {showParentHelp && (
+                <div style={{
+                position: 'absolute',
+                backgroundColor: 'yellow',
+                border: '4px solid black',
+                padding: '10px',
+                width: '300px',
+                color: 'black',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}>
+
               <FontAwesomeIcon icon={faCircleInfo} color="purple" size="2x" />
 
-              The parent page lets the parent set the nanny's schedule for the day including activities. Awesome, right?
+              We made the parent page to allow parents to set the schedule for the nanny.
 
               <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleParentHelp}> X </button>
             </div>
@@ -96,39 +112,39 @@ export const HomePage = () => {
         </div>
 
         <div>
-          <button class="button-62"
-            role="button"
-            onClick={handleScheduleButtonClick}>
-            <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
-            <br></br>
-            Nanny             
-          </button>
+            <button class="button-62"
+              role="button"
+              onClick={handleScheduleButtonClick}>
+              <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
+              <br></br>
+              Nanny             
+            </button>
 
-          <button class="button-62" onClick={() => setShowScheduleHelp(!showScheduleHelp)}>
-            <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
-          </button>
+            <button class="button-62" onClick={() => setShowScheduleHelp(!showScheduleHelp)}>
+              <FontAwesomeIcon icon={faLightbulb} size="2x" color="yellow"/>
+            </button>
 
-          {showScheduleHelp && (
-            <div style={{
-              position: 'absolute',
-              backgroundColor: 'yellow',
-              border: '4px solid black',
-              padding: '10px',
-              width: '300px',
-              color: 'black',
-              fontWeight: 'bold',
-              fontSize: '20px'
-            }}>
+            {showScheduleHelp && (
+              <div style={{
+                position: 'absolute',
+                backgroundColor: 'yellow',
+                border: '4px solid black',
+                padding: '10px',
+                width: '300px',
+                color: 'black',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}>
               <FontAwesomeIcon icon={faCircleInfo} color="purple" size="2x" />
-              The schedule page lets the nanny view their schedule for the day. How cool is that?
+              
+                We made the nanny page so the nanny can view their schedule. How cool is that?
         
               <button class="xButton" style={{ position: 'absolute', top: '10px', right: '10px' }} onClick={toggleScheduleHelp}> X </button>
             </div>
-          )}
-        </div>
-      </div>
-        
-        <header className="App-header">
+            )}
+            </div>
+          </div>
+
           <img src={logo} className="App-logo" alt="logo" />
           <p className="React">
             Edit <code>src/App.js</code> and save to reload.
