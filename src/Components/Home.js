@@ -77,12 +77,10 @@ export const HomePage = () => {
                 role="button"
                 onClick={handleParentButtonClick}>
                 <FontAwesomeIcon icon = {faFileLines} size="3x"/>
-
+                {' '}
                 <span> 
                   Parent
                 </span>
-
-                <br></br>
 
               </button>
           
@@ -116,8 +114,13 @@ export const HomePage = () => {
               role="button"
               onClick={handleScheduleButtonClick}>
               <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
-              <br></br>
-              Nanny             
+              {' '}
+              <span>
+                Nanny 
+              </span>
+
+              
+                          
             </button>
 
             <button class="button-62" onClick={() => setShowScheduleHelp(!showScheduleHelp)}>
