@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
-import { faCircleInfo, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faSquareCheck, faHandsHoldingChild } from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb, faPenToSquare, faPenNib, faClipboardQuestion, faLaptopCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
@@ -36,26 +36,33 @@ export const HomePage = () => {
       <div className="homePage">
         <h0>
           <FontAwesomeIcon icon={faUmbrella} className="icon" size="2x"/>
+          {' '}
           Welcome to the NannyHelper
         </h0>
 
         <h3>
-          <FontAwesomeIcon icon={faClipboardQuestion} color="white" size="2x" />
-          What's Group 17's problem statement? Read below
-          <br></br>
-          <br></br>
           <FontAwesomeIcon icon={faPenNib} color="white" size="2x" />
-          We have found that nannies struggle to keep up with their duties that the children's parents want them to do each day.
+          {' '}
+          What's Group 17's problem statement? Read below.
+          <br></br>
+          <br></br>
+          <FontAwesomeIcon icon={faHandsHoldingChild} color="white" size="2x" />
+          {' '}
+          It can be a struggle for nannies to keep up with their duties that the children's parents want them to do each day.
           <br></br>
           <br></br>
           <FontAwesomeIcon icon={faLaptopCode} color="white" size="2x" />
-          <FontAwesomeIcon icon={faHeart} color="pink" size="2x" />
-          Which is why Group 17 decided to make this application, to help struggling nannies
+          {' '}
+          <FontAwesomeIcon icon={faHeart} color="lightpink" size="2x" />
+          {' '}
+          Group 17 decided to make this application to help struggling nannies
           and parents.
           <br></br>
           <br></br>
           <FontAwesomeIcon icon = { faCircleInfo } color="white" size="2x" />
+          {' '}
           Parents can enter a form to set the nanny's schedule in the parent page. And, the nanny can view their schedule in the nanny page. 
+
         </h3>
         
         
@@ -76,7 +83,7 @@ export const HomePage = () => {
               <button class="button-62" 
                 role="button"
                 onClick={handleParentButtonClick}>
-                <FontAwesomeIcon icon = {faFileLines} size="3x"/>
+                <FontAwesomeIcon icon = {faFileLines} size="5x"/>
                 {' '}
                 <span> 
                   Parent
@@ -113,7 +120,7 @@ export const HomePage = () => {
             <button class="button-62"
               role="button"
               onClick={handleScheduleButtonClick}>
-              <FontAwesomeIcon icon={faCalendarCheck} size="3x"/> 
+              <FontAwesomeIcon icon={faCalendarCheck} size="5x"/> 
               {' '}
               <span>
                 Nanny 

@@ -3,9 +3,9 @@
 import BasicFormValidation from "../Components/BasicFormValidation";
 import React, { useState, useContext } from 'react';
 import {FormDataContext} from "./FormDataContext";
-import logo from "./nanny_read.jpg";
+import logo from "./nanny2.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faPenToSquare, faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faPenToSquare, faCalendarPlus, faUmbrella, faHandsHoldingChild } from "@fortawesome/free-solid-svg-icons";
 
 export const ParentPage = () => {
   const [showForm, setShowForm] = useState(false);
@@ -37,24 +37,36 @@ export const ParentPage = () => {
   return (
     <div className = "parentPage">
         <div className="parentHeader" style={{ position: 'relative' }}>
-    <img src={logo} alt="Logo" style={{ width: '100%' }} />
+            <div>
+              <h2>
+                <FontAwesomeIcon icon={faHandsHoldingChild} color="white" size="2x" />
+                {' '}
+                Parent Page of the
+                {' '}
+                <FontAwesomeIcon icon={faUmbrella} color="white" size="2x" />
+                {' '}
+                NannyHelper
+              </h2>
+              <img src={logo} alt="Logo" style={{ width: '800px', height: '800px'}} />
+            </div>
 
-    <div style={{ position: 'absolute', top: '70px', left: '70px', display: 'flex', gap: '70px' }}>
-      <button class="button-62" onClick={() => setShowForm(!showForm)}>
-        <FontAwesomeIcon icon={faCalendarPlus} color="white" size="2x" />
 
-        {showForm ? 'Hide form' : <div> Add a new schedule </div>}
-      </button>
+            <div className="parentButtons" style={{ position: 'absolute', top: '70px', left: '70px', display: 'flex', gap: '200px' }}>
+                <button class="button-62" onClick={() => setShowForm(!showForm)}>
+                  <FontAwesomeIcon icon={faCalendarPlus} color="white" size="5x" />
 
-      <button class="button-62" onClick={() => setUpdateForm(!updateForm)}>
-        <FontAwesomeIcon icon={faPenToSquare} color="white" size="2x" />
+                  {showForm ? 'Hide form' : <div> Add a new schedule </div>}
+                </button>
 
-        {updateForm ? 'Hide update form' : <div>Update schedule by {formData.name} {formData.date}</div> }
-      </button>
+                <button class="button-62" onClick={() => setUpdateForm(!updateForm)}>
+                  <FontAwesomeIcon icon={faPenToSquare} color="white" size="5x" />
 
-    </div>
+                  {updateForm ? 'Hide update form' : <div>Update schedule set by {formData.name} {formData.date}</div> }
+                </button>
 
-  </div>
+            </div>
+
+        </div>
 
       {showForm && (
         <div>
